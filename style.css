@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+:root{
+    --first: white;
+    --second: black;
+    --third: blue;
+    --fourth: hsla(244, 100%, 44%, 0.3);
+    --fifth: hsla(244, 100%, 44%, 0.7);
+}
+
+section{
+    padding: 90px;
+}
+
+.logo{
+    margin: 15px 25px;
+}
+.logo a{
+    font-size: 2rem;
+    padding: px;
+    text-decoration: none;
+    margin: 15px 10px;
+    color: var(--first);
+    font-family: 'Righteous', cursive;
+}
+
+.nav{
+    display: flex;
+    position: sticky;
+    align-items: center;
+    text-align: right;
+    top: 0;
+}
+.nav::before{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    align-items: center;
+    background-color: var(--second);
+    opacity: 0.4;
+    z-index: -1;
+}
+.nav ul{
+    display: flex;
+    float: right;
+    flex: 1;
+    text-align: right;
+    align-items: center;
+    font-family: 'Righteous', cursive;
+}
+.nav ul li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+.nav ul li a{
+    color: var(--first);
+    display: block;
+    float: right;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.nav ul li a:hover{
+    background-color: var(--first);
+    color: var(--second);
+}
+
+#home{
+    align-items: center;
+    margin-bottom: 50px;
+}
+#home::before{
+    width: 100%;
+    height: 550px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("Image2.jpg") no-repeat center/cover;
+    z-index: -1;
+}
+#home h1{
+    color: var(--first);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 2.8rem;
+    font-family: 'Righteous', cursive;
+}
+#home h2{
+    color: var(--first);
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 10px;
+}
+
+#skills{
+    margin: 20px;
+    padding: 30px;
+}
+#skills h3{
+    font-size: 1.3rem;
+    font-family: 'Righteous', cursive;
+    padding: 15px;
+}
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.bar-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+span{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.light-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--fourth);
+    border-radius: 20px;
+}
+.percent-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.5rem;
+    background-color: var(--fifth);
+    border-radius: 20px;
+}
+.css-bar{
+    width: 84%;
+}
+.html-bar{
+    width: 94%;
+}
+.js-bar{
+    width: 25%;
+}
+.java-bar{
+    width: 85%;
+}
+.C-bar{
+    width: 75%;
+}
+
+#about-me{
+    margin: 20px;
+    padding: 30px;
+}
+#about-me p{
+    color: var(--second);
+    font-size: 1.3rem;
+    font-family: 'Righteous', cursive;
+    line-height: 1.5rem;
+}
+
+#contact-us{
+    background-color: var(--first);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+.yo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.yo label{
+    font-size: 15px;
+    font-family: 'Righteous', cursive;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+input[type="submit"]{
+    padding: 8px;
+    margin: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: lightskyblue;
+}
+.yo form{
+    width: 50%;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: var(--second);
+    color: var(--first);
+    opacity: 0.4;
+}
+
+.footer-text p{
+    font-size: 1.2rem;
+}
+
+.head-1{
+    font-size: 3rem;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+.head-2{
+    font-size: 1.7rem;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+@media (max-width: 750px){
+    #skills{
+        margin: 30px;
+        padding-top: 70px;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .nav ul li a{
+        font-size: 0.9rem;
+        padding: 0px 5px;
+        padding-bottom: 10px;
+    }
+    #home{
+        height: 150px;
+        padding: 50px;
+    }
+    #home::before{
+        height: 400px;
+    }
+    
+    #home h1{
+        color: var(--first);
+        font-size: 1.8rem;
+        font-family: 'Righteous', cursive;
+    }
+    #home h2{
+        color: var(--first);
+        font-size: 1.5rem;
+        font-family: 'Righteous', cursive;
+    }
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+    .footer-text p{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px){
+    section{
+        padding: 150px;
+    }
+    #home{
+        height: 150px;
+        padding: 50px;
+    }
+    #home::before{
+        height: 375px;
+    }
+    #home h1{
+        color: var(--first);
+        font-size: 1.6rem;
+        font-family: 'Righteous', cursive;
+        margin: 10px;
+    }
+    #home h2{
+        color: var(--first);
+        font-size: 1.3rem;
+        font-family: 'Righteous', cursive;
+        margin: 10px;
+    }
+}
